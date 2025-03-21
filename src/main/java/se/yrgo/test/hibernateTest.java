@@ -5,7 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.cfg.Configuration;
 
-import se.yrgo.domain.Student;
+import se.yrgo.domain.Category;
 
 public class hibernateTest {
 
@@ -17,11 +17,6 @@ public class hibernateTest {
         Session session = sf.openSession();
 
         Transaction tx = session.beginTransaction();
-
-        Student newStudent = new Student("Nick Fame", "Diamond Cameron");
-        System.out.println(newStudent);
-
-        System.out.println("The student has an id  of: " + newStudent.getId());
 
         tx.commit();
         session.close();
