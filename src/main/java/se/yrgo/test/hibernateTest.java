@@ -30,10 +30,10 @@ public class hibernateTest {
         hairCare.addProductsToList(p2);
         hairCare.addProductsToList(p3);
 
-        session.save(hairCare);
         session.save(p1);
         session.save(p2);
-        session.save(p3); */
+        session.save(p3);
+        session.save(hairCare); */
 
         Category getCategory = (Category)session.get(Category.class, 1);
         List<Product> productList = getCategory.getProducts();
